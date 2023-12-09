@@ -1,10 +1,15 @@
 # Terraform module template
-A template project for kick starting a [Terraform](https://www.terraform.io/) module, with testing, validation and security checks.
+
+[![](https://img.shields.io/badge/github-ggrptr/terraform--module--template-%233DA639.svg)](https://github.com/ggrptr/terraform-module-template "github.com/ggrptr/terraform-module-template")
+[![License](https://img.shields.io/badge/license-MIT-%233DA639.svg)](https://opensource.org/licenses/MIT)
+
+A template project for kickstarting a [Terraform](https://www.terraform.io/) module, with testing, validation and security checks.
 
 All the tools used in this template run in [Docker](https://www.docker.com/) containers, to avoid having to install or configure them locally. 
-_ Documentation in progress _
 
-Example output:
+### _Documentation coming soon_
+
+Example module documentation:
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
