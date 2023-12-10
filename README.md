@@ -47,3 +47,7 @@ Example module documentation:
 
 No outputs.
 <!-- END_TF_DOCS -->
+
+**[MIT License](LICENSE)**
+
+Copyright (c) 2023 [ggrptr](https://github.com/ggrptr)

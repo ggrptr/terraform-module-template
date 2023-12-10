@@ -4,8 +4,8 @@ repos:
     rev: v3.0.0
     hooks:
       - id: conventional-pre-commit
-        stages: [ commit-msg ]
-        args: [ --strict, --force-scope, fix, feat, build, chore, ci, docs, style, refactor, revert, perf, test ]
+        stages: [commit-msg]
+        args: [--strict, --force-scope, fix, feat, build, chore, ci, docs, style, refactor, revert, perf, test]
   - repo: local
     hooks:
       - id: terraform-init
