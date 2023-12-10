@@ -1,5 +1,11 @@
 exclude: ^(.*example/.*|.*examples/.*)$
 repos:
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [ commit-msg ]
+        args: [ --strict, --force-scope, fix, feat, build, chore, ci, docs, style, refactor, revert, perf, test ]
   - repo: local
     hooks:
       - id: terraform-init
@@ -37,9 +43,3 @@ repos:
         language: system
         entry: make -e TTY_MODE="" terraform-docs
 
-  - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v2.4.0
-    hooks:
-      - id: conventional-pre-commit
-        stages: [commit-msg]
-        args: [] # optional: list of Conventional Commits types to allow
