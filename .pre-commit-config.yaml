@@ -1,45 +1,45 @@
 exclude: ^(.*example/.*|.*examples/.*)$
 repos:
-  - repo: https://github.com/compilerla/conventional-pre-commit
-    rev: v3.0.0
-    hooks:
-      - id: conventional-pre-commit
-        stages: [commit-msg]
-        args: [--strict, --force-scope, fix, feat, build, chore, ci, docs, style, refactor, revert, perf, test]
   - repo: local
     hooks:
       - id: terraform-init
         name: Terraform init
+        stages: [commit]
         verbose: false
         pass_filenames: false
         language: system
         entry: make -e TTY_MODE="" terraform init
       - id: terraform-fmt
         name: Terraform fmt
+        stages: [commit]
         verbose: false
         pass_filenames: false
         language: system
         entry: make -e TTY_MODE="" terraform fmt -- --recursive
       - id: terraform-validate
         name: Terraform validate
+        stages: [commit]
         verbose: false
         pass_filenames: false
         language: system
         entry: make -e TTY_MODE="" terraform validate
       - id: tfLint
         name: tfLint
+        stages: [commit]
         verbose: false
         pass_filenames: false
         language: system
         entry: make -e TTY_MODE="" tflint -- --recursive
       - id: checkov
         name: Checkov
+        stages: [commit]
         verbose: false
         pass_filenames: false
         language: system
         entry: make -e TTY_MODE="" checkov
       - id: terraform-docs
         name: Terraform docs
+        stages: [commit]
         language: system
         entry: make -e TTY_MODE="" terraform-docs
 
