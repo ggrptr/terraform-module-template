@@ -6,7 +6,7 @@ TFLINT_IMAGE:=ghcr.io/terraform-linters/tflint:v0.49.0
 CHECKOV_IMAGE:=bridgecrew/checkov:3.1.11
 TERRAFORM_DOCS_IMAGE:=ggrptr/terraform-docs:latest
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-WORKDIR=.
+WORKDIR=$(shell realpath --relative-to=${ROOT_DIR} $(realpath .))
 TTY_MODE=-it
 
 define _run_in_container
