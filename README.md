@@ -57,8 +57,27 @@ The above is not so intuitive, because the default pre-commit install command on
 which isn't enough for the commit-msg hook to work.
 
 ### Configured hooks
+It the pre-commit configuration is correct, the following hooks will run automatically when you commit your changes.
+If any of the checks fail, the commit will be aborted.
 
-_...in progress..._
+#### Conventional pre commit
+Checks if your commit message follows the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) format.
+
+#### Terraform init
+Initialises the terraform project, installs the required providers and modules.
+
+#### Terraform validate
+Validates the terraform code, checks for syntax errors.
+
+#### Tflint
+Checks for errors in the terraform code with the [TFLint](https://github.com/terraform-linters/tflint) tool.
+
+#### Checkov
+Checks for security issues in the terraform code with the [Checkov](https://www.checkov.io) tool.
+
+#### Terraform docs
+Generates documentation for the terraform module with the [terraform-docs](https://terraform-docs.io) tool.
+It writes the documentation to the README.md file, between the BEGIN_TF_DOCS and END_TF_DOCS comments, like below:
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
