@@ -59,6 +59,7 @@ which isn't enough for the commit-msg hook to work.
 ### Configured hooks
 It the pre-commit configuration is correct, the following hooks will run automatically when you commit your changes.
 If any of the checks fail, the commit will be aborted.
+If the hooks change any files, the commit will be aborted, and you have to stage modified files, and commit again.
 
 #### Conventional pre commit
 Checks if your commit message follows the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) format.
