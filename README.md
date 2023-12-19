@@ -35,6 +35,14 @@ location of the Makefile:
 make -f ../Makefile terraform init
 ```
 
+#### AWS credentials
+The Makefile targets will use the AWS credentials from the host environment, so you have to set them before running 
+the commands that require AWS access. These variables are used:
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_SESSION_TOKEN
+- AWS_REGION
+
 ### Pre-commit hooks
 
 The project contains a pre-commit configuration file (.pre-commit-config.yaml), 
