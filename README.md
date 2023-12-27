@@ -125,6 +125,6 @@ It writes the documentation to the README.md file, between the BEGIN_TF_DOCS and
 No outputs.
 <!-- END_TF_DOCS -->
 
-**[MIT License](LICENSE)**
+**[MIT License](https://opensource.org/licenses/MIT)**
 
 Copyright (c) 2023 [ggrptr](https://github.com/ggrptr)
